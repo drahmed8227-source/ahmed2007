@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    background: #000;
+    color: #fff;
+}
+
+#canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#ui {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+}
+
+#title {
+    font-size: 3rem;
+    color: #00ffff;
+    text-shadow: 0 0 20px #00ffff;
+    margin-bottom: 2rem;
+}
+
+.orb {
+    background: radial-gradient(circle, #ff00ff, #800080);
+    border: none;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: 0 1rem;
+    cursor: pointer;
+    box-shadow: 0 0 20px #ff00ff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.orb:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 40px #ff00ff;
+}
+
+#menu {
+    margin-top: 2rem;
+}
+
+.satellite {
+    display: inline-block;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    background: #0080ff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #0080ff;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.satellite:hover {
+    transform: rotate(10deg);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    #title {
+        font-size: 2rem;
+    }
+    .orb {
+        width: 80px;
+        height: 80px;
+        margin: 0 0.5rem;
+    }
+    .satellite {
+        margin: 0.5rem;
+        padding: 0.3rem 0.8rem;
+    }
+    #ui {
+        top: 40%;
+    }
+}
